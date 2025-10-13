@@ -4,6 +4,8 @@ import App from './App'
 import './index.css'
 import { createBrowserRouter } from 'react-router-dom'
 import Loginpage from './pages/loginpage'
+import { Signuppage } from './pages/signuppage'
+import Dashboard from './pages/dashboard/dashboard'
 
 const router =createBrowserRouter(
   [
@@ -13,7 +15,15 @@ const router =createBrowserRouter(
        Children:[
       {
         path:'/login',
-        element:<Loginpage/>
+        element:<Loginpage/>,
+      },
+      { 
+        path:'/register',
+        element:<Signuppage/>
+      },
+       { 
+        path:'/dashboard',
+        element:<Dashboard/>
       }
 
     ]
