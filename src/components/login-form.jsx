@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils.jsx"
 import { Button } from "@/components/ui/button"
 import {
   Card,

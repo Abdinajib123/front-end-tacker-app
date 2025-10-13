@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import Loginpage from './pages/auth/loginpage'
+import Loginpage from './pages/loginpage.jsx'
 
 
 function App() {
