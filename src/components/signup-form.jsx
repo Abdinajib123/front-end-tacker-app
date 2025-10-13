@@ -14,6 +14,7 @@ import {
   FieldLabel,
 } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { Link } from "react-router-dom"
 
 export function SignupForm({
   className,
@@ -67,7 +68,7 @@ export function SignupForm({
                   Login with Google
                 </Button>
                 <FieldDescription className="text-center">
-                  Don&apos;t have an account? <a href="#">Sign in</a>
+                  Don&apos;t have an account? <Link to="/dashboard">Sign up</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>
