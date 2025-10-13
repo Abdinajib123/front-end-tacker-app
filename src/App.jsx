@@ -1,10 +1,13 @@
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'
+import Loginpage from './pages/auth/loginpage'
 
 
 function App() {
 return (
   <div className="App">
-    <h1 >Hello world</h1>
+    <Loginpage />
+   <Outlet />
   </div>
 )
 }
