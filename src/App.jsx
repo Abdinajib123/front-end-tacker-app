@@ -1,9 +1,12 @@
-import { Fragment, useState } from 'react'
-import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
+import { Fragment } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Loginpage from './pages/loginpage.jsx'
 import { Signuppage } from './pages/signuppage.jsx'
 import Dashboard from './pages/dashboard/dashboard.jsx'
-
+import Projects from './pages/dashboard/projects.jsx'
+import Tasks from './pages/dashboard/tasks.jsx'
+import { User } from 'lucide-react'
+import Layout from './components/layout.jsx'
 
 function App() {
   return (
@@ -12,12 +15,15 @@ function App() {
         <Routes>
           <Route path='/' element={<Loginpage />} />
           <Route path='/register' element={<Signuppage />} />
-          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/dashboard' element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path='projects' element={<Projects />} />
+            <Route path='tasks' element={<Tasks />} />
+            <Route path='users' element={<User />} />
+          </Route>
         </Routes>
-        <Outlet />
       </BrowserRouter>
     </Fragment>
-    
   )
 }
 

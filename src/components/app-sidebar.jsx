@@ -54,24 +54,24 @@ const data = {
 
     {
       title: "Projects",
-      url: "/projects",
+      url: "/dashboard/projects",
       icon: Bot,
       items: [
         {
           title: "projects",
-          url: "projects",
+          url: "/dashboard/projects",
         },
 
       ],
     },
     {
       title: "tasks",
-      url: "/tasks",
+      url: "/dashboard/tasks",
       icon: BookOpen,
       items: [
         {
           title: "tasks",
-          url: "/tasks",
+          url: "/dashboard/tasks",
         },
 
 
@@ -79,12 +79,12 @@ const data = {
     },
     {
       title: "users",
-      url: "/users",
+      url: "/dashboard/users",
       icon: BookOpen,
       items: [
         {
           title: "users",
-          url: "/users",
+          url: "/dashboard/users",
         },
 
 
