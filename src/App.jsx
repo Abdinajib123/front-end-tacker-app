@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import Loginpage from './pages/loginpage.jsx'
 import { Signuppage } from './pages/signuppage.jsx'
 import Dashboard from './pages/dashboard/dashboard.jsx'
@@ -13,13 +13,13 @@ function App() {
     <Fragment>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Loginpage />} />
-          <Route path='/register' element={<Signuppage />} />
-          <Route path='/dashboard' element={<Layout />}>
+          <Route path="/" element={<Loginpage />} />
+          <Route path="/register" element={<Signuppage />} />
+          <Route path="/dashboard" element={<Layout />}>
             <Route index element={<Dashboard />} />
-            <Route path='projects' element={<Projects />} />
-            <Route path='tasks' element={<Tasks />} />
-            <Route path='users' element={<User />} />
+            <Route path="projects" element={<Projects />} />
+            <Route path="tasks" element={<Tasks />} />
+            <Route path="users" element={<User />} />
           </Route>
         </Routes>
       </BrowserRouter>

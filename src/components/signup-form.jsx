@@ -23,21 +23,21 @@ export function SignupForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
-        <CardHeader>
-          <CardTitle>Signup to your account</CardTitle>
+        <CardHeader className="text-center space-y-2">
+          <CardTitle>Create your account</CardTitle>
           <CardDescription>
-            Enter your email below to login to your account
+            Enter your details to sign up
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form>
+          <form className="space-y-4">
             <FieldGroup>
                 <Field>
                 <FieldLabel htmlFor="username">Username</FieldLabel>
                 <Input
                   id="username"
-                  type="username"
-                  placeholder="username"
+                  type="text"
+                  placeholder="your username"
                   required
                 />
               </Field>
@@ -51,24 +51,18 @@ export function SignupForm({
                 />
               </Field>
               <Field>
-                <div className="flex items-center">
-                  <FieldLabel htmlFor="password">Password</FieldLabel>
-                  <a
-                    href="#"
-                    className="ml-auto inline-block text-sm underline-offset-4 hover:underline"
-                  >
-                    Forgot your password?
-                  </a>
-                </div>
+                <FieldLabel htmlFor="password">Password</FieldLabel>
                 <Input id="password" type="password" required />
               </Field>
               <Field>
-                <Button type="submit">Sign up</Button>
-                <Button variant="outline" type="button">
-                  Login with Google
-                </Button>
+                <div className="grid gap-2">
+                  <Button type="submit" className="w-full">Sign up</Button>
+                  <Button variant="outline" type="button" className="w-full">
+                    Sign up with Google
+                  </Button>
+                </div>
                 <FieldDescription className="text-center">
-                  Don&apos;t have an account? <Link to="/dashboard">Sign up</Link>
+                  Already have an account? <Link to="/">Log in</Link>
                 </FieldDescription>
               </Field>
             </FieldGroup>

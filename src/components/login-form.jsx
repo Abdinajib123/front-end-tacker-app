@@ -23,14 +23,14 @@ export function LoginForm({
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card>
-        <CardHeader>
+        <CardHeader className="text-center space-y-2">
           <CardTitle>Login to your account</CardTitle>
           <CardDescription>
             Enter your email below to login to your account
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form>
+          <form className="space-y-4">
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="email">Email</FieldLabel>
@@ -54,10 +54,12 @@ export function LoginForm({
                 <Input id="password" type="password" required />
               </Field>
               <Field>
-                <Button type="submit">Login</Button>
-                <Button variant="outline" type="button">
-                  Login with Google
-                </Button>
+                <div className="grid gap-2">
+                  <Button type="submit" className="w-full">Login</Button>
+                  <Button variant="outline" type="button" className="w-full">
+                    Login with Google
+                  </Button>
+                </div>
                 <FieldDescription className="text-center">
                   Don&apos;t have an account?  <Link to="/register">Sign up</Link>
                 </FieldDescription>
